@@ -1,0 +1,7 @@
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\bin\Release\Qy_Csharp_NetWork.dll
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\bin\Release\Qy_Csharp_NetWork.pdb
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\bin\Release\Newtonsoft.Json.dll
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\bin\Release\UnityEngine.dll
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\obj\Release\Qy_Csharp_NetWork.dll
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\obj\Release\Qy_Csharp_NetWork.pdb
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\bin\Release\Qy_Csharp_NetWork.xml

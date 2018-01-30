@@ -1,0 +1,7 @@
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\bin\Debug\Qy_Csharp_NetWork.dll
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\bin\Debug\Qy_Csharp_NetWork.pdb
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\obj\Debug\Qy_Csharp_NetWork.dll
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\obj\Debug\Qy_Csharp_NetWork.pdb
+D:\VS_Project\Qy_Assembly\C_sharp\NetWork\Qy_Csharp_NetWork\bin\Debug\Newtonsoft.Json.dll
+D:\UnityDocument\Project\Unity5.x\LookAtMePro\Assets\Plugins\Qy_Csharp_NetWork.dll
+D:\UnityDocument\Project\Unity5.x\LookAtMePro\Assets\Plugins\Qy_Csharp_NetWork.pdb
