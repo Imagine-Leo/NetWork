@@ -27,9 +27,14 @@ namespace Qy_CSharp_NetWork.Component
         public NET_OPTION NetOption { get { return m_netOption; } set { m_netOption = value; } } /* pubulic  网络选项 */
         private NET_OPTION m_netOption = NET_OPTION.LAN;
         private const string POST_URL_LAN = @"http://192.168.0.102/records/create";
-        private const string POST_URL_WAN = @"http://www.lookatme-plus.com/records/create";
+        //private const string POST_URL_WAN = @"http://www.lookatme-plus.com/records/create";
+        private const string POST_URL_WAN = @"http://game.jm-cbox.com/records/create";
 
-        private const string WEB_BASE_URL = @"http://www.lookatme-plus.com/wx?"; //码
+        //
+
+        //private const string WEB_BASE_URL = @"http://www.lookatme-plus.com/wx?"; //码
+        private const string WEB_BASE_URL = @"http://game.jm-cbox.com/wx?"; //码
+
 
         /******************************************
          *          底层操作项：request\socket    *
@@ -252,6 +257,10 @@ namespace Qy_CSharp_NetWork.Component
                 case COMPLETE_OR_FAILED.COMPLETE:
                     ClearDataFormat _clearData;
                     bool _isSucc = m_datahandle.SocketStrDataHandle(message, out _clearData);
+                    //if (_clearData.Type != REV_MSG_TYPE.HEART_BEAT)
+                    //{
+                    //    DebugQy.LeoLog("<color=red>>>>>>>>:" + message + "</color>");
+                    //}
                     if (_isSucc)
                     {
                         switch (_clearData.Type)
@@ -392,6 +401,15 @@ namespace Qy_CSharp_NetWork.Component
             awardListInfo.SetReceiver(new string[] { "HostSever" });
             m_SocketClientController.SendMessage(awardListInfo.ToJson());
         }
+        public void PostAwardeList_leo(Dictionary<string, int> userId_count_Dic, bool timeTag = true)
+        {
+            MsgPostAwadeList_Leo awardListInfo = new MsgPostAwadeList_Leo(userId_count_Dic);
+            if (timeTag)
+                awardListInfo.SetTime();
+            awardListInfo.SetReceiver(new string[] { "HostSever" });
+            //DebugQy.LeoLog(awardListInfo.ToJson());
+            m_SocketClientController.SendMessage(awardListInfo.ToJson());
+        }
         public void PostAwardeList(List<int> countList, bool timeTag = true)
         {
             MsgPostAwadeList awardListInfo = new MsgPostAwadeList(countList);
@@ -408,6 +426,7 @@ namespace Qy_CSharp_NetWork.Component
             awardListInfo.SetReceiver(new string[] { "HostSever" });
             m_SocketClientController.SendMessage(awardListInfo.ToJson());
         }
+
 
         #region <<<<<<   EventTrigger   >>>>>>>
         private void m_DataEventTrigger(DATA_STATUS_CODE status, string msg)

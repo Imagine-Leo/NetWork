@@ -149,6 +149,19 @@ namespace Qy_CSharp_NetWork.Component
             else
                 Debug.LogWarning("look at me is not connected , please check the link ");
         }
+
+        /// <summary>
+        /// 请求多个奖励
+        /// </summary>
+        /// <param name="userId_count_Dic"></param>
+        /// <param name="timeTag"></param>
+        public void PostAwardeList_leo(Dictionary<string, int> userId_count_Dic, bool timeTag = true)
+        {
+            if (m_jisightLAM.connected)
+                m_jisightLAM.PostAwardeList_leo(userId_count_Dic, timeTag);
+            else
+                Debug.LogWarning("look at me is not connected , please check the link ");
+        }
         /// <summary>
         /// 请求单个奖励
         /// </summary>

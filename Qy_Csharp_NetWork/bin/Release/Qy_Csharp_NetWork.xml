@@ -48,6 +48,13 @@
             <param name="userId_count_Dic"></param>
             <param name="timeTag"></param>
         </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PostAwardeList_leo(System.Collections.Generic.Dictionary{System.String,System.Int32},System.Boolean)">
+            <summary>
+            请求多个奖励
+            </summary>
+            <param name="userId_count_Dic"></param>
+            <param name="timeTag"></param>
+        </member>
         <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PostAwardeList(System.Collections.Generic.List{System.Int32},System.Boolean)">
             <summary>
             请求单个奖励

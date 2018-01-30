@@ -135,6 +135,7 @@ namespace Qy_CSharp_NetWork.DataFormat.JisightLAM
         public class Msg
         {
             public int type = 1;
+
             public List<object> data = new List<object>();
             public class AwardInfo
             {
@@ -150,6 +151,32 @@ namespace Qy_CSharp_NetWork.DataFormat.JisightLAM
                 public List<AwardInfo> users = new List<AwardInfo>();
                 public string mysterious = "";
             }
+        }
+    }
+
+
+    class MsgPostAwadeList_Leo : PostGetMsg
+    {
+        public MsgPostAwadeList_Leo(Dictionary<string, int> userIdCountAwardList)
+        {
+            foreach (KeyValuePair<string, int> ky in userIdCountAwardList)
+            {
+                Msg info = new Msg();
+                info.userId = ky.Key;
+                info.is_npc = ky.Value;
+                m_msgData.Add(info);
+            }
+        }
+
+        public override string Tp { get { return ((int)m_type).ToString(); } }
+        public override object Mg { get { return m_msgData; } }
+
+        private SND_MSG_TYPE m_type = SND_MSG_TYPE.AWARDE_REQUEST;
+        private List<Msg> m_msgData = new List<Msg>();
+        public class Msg
+        {
+            public string userId = string.Empty;
+            public int is_npc = 0;
         }
     }
 

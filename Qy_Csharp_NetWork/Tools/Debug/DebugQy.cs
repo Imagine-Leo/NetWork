@@ -65,6 +65,10 @@ namespace Qy_CSharp_NetWork.Tools.Debug
             m_CanLogTag = CanLogTag;
             m_CanLogException = CanLogException;
         }
+        public static void LeoLog(string logMsg)
+        {
+            UnityEngine.Debug.LogWarning("leo:"+logMsg);
+        }
         public static void Log(string logMsg)
         {
 #if DEBUG
